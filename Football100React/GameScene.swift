@@ -8,8 +8,12 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    public var backgroundMusicPlayer: AVAudioPlayer?
+    
     
     var level = 2
     var duration: CGFloat = 0.5
@@ -46,6 +50,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     public var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
+    
+    // sound
+    let gameSound = SKAction.playSoundFileNamed("ray charles beat.m4a", waitForCompletion: true)
     
     var touchdown = SKSpriteNode(imageNamed: "touchdown")
     var lossDown = SKSpriteNode(imageNamed: "LossDown")
@@ -230,6 +237,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBackground()
         debugDrawPlayableArea()
         createCamera()
+        playBackgroundMusic("ray charles beat.m4a")
         
         createRunningback()
         
@@ -785,6 +793,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         downLabel.horizontalAlignmentMode = .left
         downLabel.position = CGPoint(x: 20, y: 640)
         addChild(downLabel)
+    }
+    
+    public func playBackgroundMusic(_ filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        if (url == nil) {
+            print("Could not find file: \(filename)")
+            return
+        }
+        var error: NSError? = nil
+        
+        do {
+            backgroundMusicPlayer = try AVAudioPlayer(contentsOf: url!)
+        } catch let error1 as NSError {
+            error = error1
+            backgroundMusicPlayer = nil
+        }
+        if let player = backgroundMusicPlayer {
+            player.numberOfLoops = -1
+            player.prepareToPlay()
+            player.play()
+        } else {
+            print("Could not create audio player: \(error!)")
+        }
     }
 }
 

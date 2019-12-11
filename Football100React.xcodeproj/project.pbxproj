@@ -14,6 +14,7 @@
 		87327263239DB60300D7F406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87327262239DB60300D7F406 /* Assets.xcassets */; };
 		87327266239DB60300D7F406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87327264239DB60300D7F406 /* LaunchScreen.storyboard */; };
 		87327270239DB88E00D7F406 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8732726F239DB88E00D7F406 /* MyUtils.swift */; };
+		8732727223A16EB900D7F406 /* ray charles beat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8732727123A16E1B00D7F406 /* ray charles beat.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		87327265239DB60300D7F406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87327267239DB60300D7F406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8732726F239DB88E00D7F406 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
+		8732727123A16E1B00D7F406 /* ray charles beat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ray charles beat.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		87327254239DB60100D7F406 /* Football100React */ = {
 			isa = PBXGroup;
 			children = (
+				8732727123A16E1B00D7F406 /* ray charles beat.m4a */,
 				8732726F239DB88E00D7F406 /* MyUtils.swift */,
 				87327255239DB60100D7F406 /* AppDelegate.swift */,
 				8732725B239DB60100D7F406 /* GameScene.swift */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8732727223A16EB900D7F406 /* ray charles beat.m4a in Resources */,
 				87327261239DB60100D7F406 /* Main.storyboard in Resources */,
 				87327263239DB60300D7F406 /* Assets.xcassets in Resources */,
 				87327266239DB60300D7F406 /* LaunchScreen.storyboard in Resources */,
